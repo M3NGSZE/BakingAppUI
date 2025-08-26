@@ -6,6 +6,7 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
@@ -84,7 +85,7 @@ fun CardsSection(){
 
 @Composable
 fun CardItem(
-    index: Int,
+    index: Int
 ){
     val card = cards[index]
     var lastItemPaddingEnd = 0.dp
@@ -99,7 +100,7 @@ fun CardItem(
 
     Box(
         modifier = Modifier
-            .padding(16.dp, end = lastItemPaddingEnd)
+            .padding(start = 16.dp, end = lastItemPaddingEnd)
     ){
         Column (
             modifier = Modifier
@@ -116,6 +117,8 @@ fun CardItem(
                 contentDescription = card.cardName,
                 modifier = Modifier.width(60.dp)
             )
+
+            Spacer(modifier = Modifier.height(10.dp))
 
             Text(
                 text = card.cardName,
