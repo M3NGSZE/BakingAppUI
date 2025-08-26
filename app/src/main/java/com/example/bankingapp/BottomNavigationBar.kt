@@ -14,6 +14,7 @@ import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
 import com.example.bankingapp.data.BottomNavigation
 
 val items = listOf(
@@ -36,10 +37,11 @@ val items = listOf(
 )
 
 @Composable
+@Preview
 fun BottomNavigationBar(){
     NavigationBar {
         Row (
-            modifier = Modifier.background(MaterialTheme.colorScheme.inverseSurface)
+            modifier = Modifier.background(MaterialTheme.colorScheme.inverseOnSurface)
         ){
             items.forEachIndexed { index, item ->
                 NavigationBarItem(
